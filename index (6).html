@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Gitanjali Hotel | New Digha | Official Website</title>
+    <meta name="description" content="Welcome to New Gitanjali Hotel, your perfect seaside retreat in New Digha. Enjoy comfortable stays, excellent hospitality, and a prime location near the beach.">
+    <meta name="keywords" content="hotel in digha, new gitanjali hotel, digha hotel booking, new digha hotel, seaside hotel digha">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-blue': '#003366',
+              'brand-gold': '#D4AF37',
+              'brand-light': '#F8F9FA',
+            },
+            fontFamily: {
+              'sans': ['Inter', 'sans-serif'],
+              'serif': ['Georgia', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+      /* Style for active navigation link */
+      .nav-link-active {
+        color: #D4AF37;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+    </style>
+</head>
+
+<body class="bg-brand-light text-gray-800 font-sans">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Header -->
+    <header id="header" class="bg-brand-blue shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex-shrink-0">
+            <a href="#home" class="flex items-center space-x-2">
+              <img class="h-12 w-12 rounded-full object-cover" src="/logo.png" alt="New Gitanjali Hotel Logo" />
+              <span class="text-white text-xl font-bold tracking-tight">New Gitanjali Hotel</span>
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a href="#home" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+              <a href="#about" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+              <a href="#gallery" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Gallery</a>
+              <a href="#contact" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+            </div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <button id="mobile-menu-button" type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#home" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">Home</a>
+            <a href="#about" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">About</a>
+            <a href="#gallery" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">Gallery</a>
+            <a href="#contact" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Home Section -->
+      <section id="home">
+        <!-- Image Slider -->
+        <div id="image-slider" class="relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden">
+            <div id="slider-track" class="flex transition-transform ease-out duration-700 h-full">
+                <!-- Slides will be injected by JS -->
+            </div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white z-10 p-4">
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold font-serif drop-shadow-lg">Experience Tranquility by the Sea</h1>
+                <p class="mt-4 text-md md:text-xl max-w-2xl mx-auto drop-shadow-md">Your perfect getaway at New Digha's finest hotel.</p>
+            </div>
+            <button id="prev-slide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition z-20" aria-label="Previous Slide">&#10094;</button>
+            <button id="next-slide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition z-20" aria-label="Next Slide">&#10095;</button>
+            <div id="slider-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+                <!-- Dots will be injected by JS -->
+            </div>
+        </div>
+
+        <div class="py-16 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-brand-blue font-serif mb-4">Welcome to New Gitanjali Hotel – The Best Beachside Stay in New Digha</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                  Experience a premium coastal getaway at New Gitanjali Hotel, one of the most preferred hotels near New Digha Sea Beach for families, couples, and holiday travellers. Located just a short walk from the beach, our hotel offers modern AC rooms, a relaxing swimming pool, complimentary breakfast, free Wi-Fi, and warm hospitality for a comfortable and memorable stay.
+                </p>
+                <p class="text-lg text-gray-700">
+                  With its prime location, New Gitanjali Hotel allows you to enjoy the sea breeze, sunset views, and local attractions within minutes. Whether you are planning a weekend escape, a family holiday, or a romantic trip, our hotel delivers a peaceful coastal experience with excellent facilities and friendly service.
+                </p>
+              </div>
+              <div class="mt-12 max-w-3xl mx-auto">
+                 <h3 class="text-2xl font-bold text-brand-blue font-serif mb-6 text-center">Highlights of Our Stay</h3>
+                 <ul id="hotel-highlights-list" class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-left text-gray-700">
+                    <!-- Highlights will be injected by JS -->
+                 </ul>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="bg-white py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-extrabold text-brand-blue font-serif">About New Gitanjali Hotel</h1>
+              <p class="mt-4 text-lg text-gray-600">Your Premium Beachside Stay in New Digha</p>
+            </div>
+    
+            <div class="max-w-4xl mx-auto space-y-6 text-gray-700 text-lg leading-relaxed mb-16 text-justify">
+                <p>
+                  New Gitanjali Hotel is a premium beachside stay located in the heart of New Digha, just a few minutes’ walk from the sea beach. We are known for our modern amenities, prime location, and warm hospitality that make every stay relaxing and memorable. Whether you are travelling with family, as a couple, or with friends, our hotel provides a clean, safe and comfortable environment close to all major attractions.
+                </p>
+                <p>
+                  Our rooms are designed for comfort and convenience, featuring AC, cozy interiors, attached bathrooms, and essential facilities to make your stay stress-free. Guests enjoy complimentary breakfast, high-speed Wi-Fi, 24×7 assistance, and swimming pool access during their stay. We focus on delivering a peaceful resort-like experience at an affordable price.
+                </p>
+                <p>
+                  Our location gives travellers quick access to Amarabati Park, the Marine Aquarium, the beachside promenade, and local markets — perfect for sightseeing and evening strolls. With a blend of modern design, coastal charm, and attentive service, New Gitanjali Hotel ensures a beautiful stay in New Digha.
+                </p>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div>
+                <img 
+                  src="/logo.png" 
+                  alt="The stunning exterior of New Gitanjali Hotel at night"
+                  class="rounded-lg shadow-xl w-full h-auto object-cover"
+                />
+              </div>
+              <div>
+                  <h3 class="text-3xl font-bold text-brand-blue font-serif mb-6">Why Guests Prefer Us</h3>
+                  <ul id="about-highlights-list" class="space-y-4 text-gray-700 text-lg">
+                    <!-- About highlights will be injected by JS -->
+                 </ul>
+              </div>
+            </div>
+    
+            <div class="text-center mt-16 text-gray-700 text-lg max-w-3xl mx-auto">
+                <p class="font-semibold">At New Gitanjali Hotel, every detail is designed to make your coastal holiday comfortable, enjoyable and memorable.</p>
+            </div>
+          </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="bg-brand-light py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-extrabold text-brand-blue font-serif">Our Gallery</h1>
+              <p class="mt-4 text-lg text-gray-600">A Glimpse Into Your Stay</p>
+            </div>
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Gallery images will be injected by JS -->
+            </div>
+          </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="bg-white py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+              <h1 class="text-4xl font-extrabold text-brand-blue font-serif">Contact Us</h1>
+              <p class="mt-4 text-lg text-gray-600">We're here to help you plan your perfect stay.</p>
+            </div>
+    
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div class="bg-brand-light p-8 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-brand-blue mb-6">Get in Touch</h2>
+                <div class="space-y-6">
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 h-8 w-8 text-brand-gold mt-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-800">Address</h3>
+                      <p class="text-gray-600" id="contact-address"></p>
+                    </div>
+                  </div>
+    
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 h-8 w-8 text-brand-gold mt-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-800">Phone</h3>
+                      <a id="contact-phone" href="" class="text-gray-600 hover:text-brand-gold"></a>
+                    </div>
+                  </div>
+    
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 h-8 w-8 text-brand-gold mt-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25-2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-800">Email</h3>
+                      <a id="contact-email" href="" class="text-gray-600 hover:text-brand-gold"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full h-96 lg:h-full rounded-lg shadow-lg overflow-hidden border-4 border-brand-gold">
+                <iframe id="map-iframe" src="" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Hotel Location Map"></iframe>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="py-16 bg-brand-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+           <h2 class="text-3xl font-bold text-brand-blue font-serif mb-8 text-center">Frequently Asked Questions</h2>
+           <div id="faq-container" class="max-w-3xl mx-auto space-y-4">
+              <!-- FAQs will be injected by JS -->
+           </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating Buttons -->
+    <div class="fixed bottom-5 right-5 z-50 flex flex-col items-center space-y-3">
+        <a id="whatsapp-btn" href="" target="_blank" rel="noopener noreferrer" class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition transform hover:scale-110" aria-label="Chat on WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l.001.004 4.919-1.282zm-4.517 5.21c-.021-.051-.102-.093-.19-.115s-.175-.022-.24-.022c-.221 0-.441.053-.64.158-.211.11-.42.268-.588.463s-.299.438-.348.711c-.05.272-.008.556.13.818.151.287.359.55.608.788.249.239.52.45.811.637.291.188.599.34.92.453.33.119.673.19.991.19.462 0 .913-.099 1.259-.288.428-.23.78-.549 1.008-.961.228-.412.309-.89.243-1.355-.065-.465-.259-.865-.544-1.162-.284-.298-.657-.484-1.058-.549-.401-.065-.82.028-1.15.229-.29.176-.519.422-.656.711-.122.259-.168.561-.132.858.036.296.173.559.381.758.208.199.48.331.78.385.3.054.609.032.895-.064.286-.096.544-.257.747-.473.203-.217.33-.496.364-.799.034-.303-.012-.613-.138-.884-.125-.272-.324-.49-.579-.637-.255-.147-.559-.21-.865-.182-.306.028-.599.138-.845.318-.246.179-.43.422-.529.69-.099.268-.119.56-.053.829.066.268.221.503.441.673.22.17.495.267.78.277.285.01.562-.058.811-.19.25-.132.46-.328.608-.571.149-.244.221-.529.208-.818-.013-.288-.103-.556-.261-.78-.158-.224-.381-.393-.644-.489-.263-.096-.554-.115-.829-.053-.275.062-.524.21-.711.422-.187.212-.303.48-.324.768-.021.288.043.575.182.818.139.244.348.435.599.559.251.124.532.17.811.128.279-.041.544-.168.758-.363.214-.195.368-.454.441-.747.073-.292.062-.602-.032-.895-.094-.293-.268-.556-.503-.758-.235-.202-.524-.331-.845-.364-.321-.032-.644.032-.913.182-.269.149-.48.384-.599.588-.119.203-.168.441-.132.68.036.239.152.463.324.644.172.18.393.303.644.348.25.045.503.013.723-.096.22-.109.405-.283.529-.503.124-.221.173-.474.132-.723-.041-.25-.168-.474-.359-.644-.191-.17-.441-.267-.711-.277-.27-.01-.524.062-.738.19-.214.128-.384.323-.48.571-.096.248-.115.52-.053.78.062.26.21.48.422.644.212.165.474.268.758.288.284.02.575-.038.83-.173.254-.135.46-.348.588-.619.128-.27.173-.578.128-.884-.045-.306-.182-.588-.393-.818" />
+            </svg>
+        </a>
+        <a id="call-btn" href="" class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition transform hover:scale-110" aria-label="Call Us">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue text-white">
+        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2024 New Gitanjali Hotel. All Rights Reserved.</p>
+            <p class="mt-2 opacity-75">Designed for a memorable seaside experience in New Digha.</p>
+        </div>
+    </footer>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- Data from constants.ts ---
+        const SLIDER_IMAGES = [
+          { src: '/logo.png', alt: 'New Gitanjali Hotel exterior at night' },
+          { src: '/gallery1.jpg', alt: 'Spacious deluxe room with a king-sized bed' },
+          { src: '/gallery2.jpg', alt: 'Comfortable family suite with multiple beds' },
+          { src: '/gallery3.jpg', alt: 'Rooftop swimming pool with a relaxing ambiance' },
+          { src: '/gallery4.jpg', alt: 'Elegant dining area of the hotel restaurant' },
+        ];
+
+        const GALLERY_IMAGES = [
+          { src: '/gallery1.jpg', alt: 'Spacious Deluxe Room with King Bed' },
+          { src: '/gallery2.jpg', alt: 'Modern and Clean Bathroom' },
+          { src: '/gallery3.jpg', alt: 'Hotel Restaurant Dining Area' },
+          { src: '/gallery4.jpg', alt: 'Welcoming Hotel Lobby and Reception' },
+          { src: '/logo.png', alt: 'New Gitanjali Hotel Exterior at Night' },
+          { src: '/gallery6.jpg', alt: 'Beautiful View from a Hotel Balcony' },
+          { src: '/gallery7.jpg', alt: 'Family Suite with Multiple Beds' },
+          { src: '/gallery8.jpg', alt: 'Conference and Banquet Hall' },
+          { src: '/gallery9.jpg', alt: 'Rooftop Swimming Pool Area' },
+          { src: '/gallery10.jpg', alt: 'Another View of a Well-appointed Room' },
+          { src: '/gallery11.jpg', alt: 'Corridor of the Hotel' },
+          { src: '/gallery12.jpg', alt: 'Close-up of Room Amenities' },
+        ];
+
+        const CONTACT_INFO = {
+          address: 'New Gitanjali Hotel, New Digha Economy Hotel Sector, Plot No-10, New Digha, Digha, West Bengal 721428',
+          phone1: '+918949054167',
+          email: 'booking@newgitanjalihotel.com',
+          mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.0468927907577!2d87.50285567591781!3d21.61922528006241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a032fe5a1c9d37d%3A0xe2ec61dfe3d3263b!2sNew%20Gitanjali%20Hotel%2C%20New%20Digha!5e0!3m2!1sen!2sin!4v1719482782782!5m2!1sen!2sin',
+        };
+
+        const HOTEL_HIGHLIGHTS = [
+          'Beachside hotel near New Digha Sea Beach', 'AC Rooms & Family Rooms', 'Swimming Pool access',
+          'Complimentary Breakfast', 'Free Wi-Fi & Parking', 'Couple-friendly & Family-friendly', 'Prime tourist location',
+        ];
+        
+        const ABOUT_HIGHLIGHTS = [
+          'Prime beachside location near New Digha Sea Beach', 'Spacious AC Rooms & Family Rooms', 'Swimming pool with relaxed ambience',
+          'Complimentary breakfast & free Wi-Fi', 'Secure, couple-friendly & family-friendly', 'Easy access to local attractions', 'Affordable premium stay experience',
+        ];
+
+        const FAQ_DATA = [
+          { question: 'How far is the hotel from New Digha Sea Beach?', answer: 'The hotel is located within walking distance from the sea beach, making it easy to visit any time.' },
+          { question: 'Do you provide AC rooms?', answer: 'Yes, all rooms are available with AC and modern amenities for guest comfort.' },
+          { question: 'Is breakfast included?', answer: 'Yes, complimentary breakfast is provided to all staying guests.' },
+          { question: 'Does the hotel have a swimming pool?', answer: 'Yes, we have a clean and well-maintained swimming pool for guests.' },
+          { question: 'Is this a family-friendly and couple-friendly hotel?', answer: 'Yes, the hotel is safe, secure, family-friendly and couple-friendly.' },
+          { question: 'Is parking available?', answer: 'Yes, free parking is available for our guests.' },
+          { question: 'How can I book a room?', answer: 'Guests can contact us directly via phone or WhatsApp for quick booking and assistance.' }
+        ];
+
+        // --- Populate dynamic content ---
+
+        // Home Highlights
+        const hotelHighlightsList = document.getElementById('hotel-highlights-list');
+        HOTEL_HIGHLIGHTS.forEach(highlight => {
+            const li = document.createElement('li');
+            li.className = 'flex items-center';
+            li.innerHTML = `<svg class="w-6 h-6 text-brand-gold mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>${highlight}</span>`;
+            hotelHighlightsList.appendChild(li);
+        });
+
+        // About Highlights
+        const aboutHighlightsList = document.getElementById('about-highlights-list');
+        ABOUT_HIGHLIGHTS.forEach(highlight => {
+            const li = document.createElement('li');
+            li.className = 'flex items-start';
+            li.innerHTML = `<svg class="w-7 h-7 text-brand-gold mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>${highlight}</span>`;
+            aboutHighlightsList.appendChild(li);
+        });
+
+        // Gallery
+        const galleryGrid = document.getElementById('gallery-grid');
+        GALLERY_IMAGES.forEach(image => {
+            const div = document.createElement('div');
+            div.className = 'group relative overflow-hidden rounded-lg shadow-lg';
+            div.innerHTML = `
+                <img src="${image.src}" alt="${image.alt}" class="w-full h-64 object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110" />
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"></div>
+                <p class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-semibold">${image.alt}</p>
+            `;
+            galleryGrid.appendChild(div);
+        });
+        
+        // Contact Info & Floating Buttons
+        document.getElementById('contact-address').textContent = CONTACT_INFO.address;
+        const phoneLink = document.getElementById('contact-phone');
+        phoneLink.href = `tel:${CONTACT_INFO.phone1}`;
+        phoneLink.textContent = CONTACT_INFO.phone1;
+        const emailLink = document.getElementById('contact-email');
+        emailLink.href = `mailto:${CONTACT_INFO.email}`;
+        emailLink.textContent = CONTACT_INFO.email;
+        document.getElementById('map-iframe').src = CONTACT_INFO.mapEmbedUrl;
+        document.getElementById('whatsapp-btn').href = `https://wa.me/${CONTACT_INFO.phone1.replace(/\s/g, '')}`;
+        document.getElementById('call-btn').href = `tel:${CONTACT_INFO.phone1}`;
+
+
+        // FAQs
+        const faqContainer = document.getElementById('faq-container');
+        FAQ_DATA.forEach((faq, index) => {
+            const details = document.createElement('details');
+            details.className = 'p-4 border rounded-lg bg-white shadow-sm cursor-pointer group';
+            details.innerHTML = `
+                <summary class="font-semibold text-lg text-gray-800 list-none flex justify-between items-center">
+                  <span>${index + 1}. ${faq.question}</span>
+                  <span class="transform transition-transform duration-300 group-open:rotate-180">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                  </span>
+                </summary>
+                <p class="mt-3 text-gray-600 pl-2">${faq.answer}</p>
+            `;
+            faqContainer.appendChild(details);
+        });
+
+        // --- Mobile Menu ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+            });
+        });
+
+        // --- Image Slider ---
+        const sliderTrack = document.getElementById('slider-track');
+        const sliderDotsContainer = document.getElementById('slider-dots');
+        let currentIndex = 0;
+        let slideInterval;
+
+        // Create slides and dots
+        SLIDER_IMAGES.forEach((image, index) => {
+            const slide = document.createElement('div');
+            slide.className = 'w-full flex-shrink-0 h-full relative';
+            slide.innerHTML = `
+                <img src="${image.src}" alt="${image.alt}" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-black opacity-40"></div>
+            `;
+            sliderTrack.appendChild(slide);
+
+            const dot = document.createElement('button');
+            dot.className = 'w-3 h-3 rounded-full transition';
+            dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                resetInterval();
+            });
+            sliderDotsContainer.appendChild(dot);
+        });
+        
+        const slides = sliderTrack.children;
+        const dots = sliderDotsContainer.children;
+        
+        function updateSlider() {
+            sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = `w-3 h-3 rounded-full transition ${currentIndex === i ? 'bg-white' : 'bg-white/50'}`;
+            }
+        }
+        
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+        
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+        }
+
+        function startInterval() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            startInterval();
+        }
+
+        document.getElementById('next-slide').addEventListener('click', () => {
+            nextSlide();
+            resetInterval();
+        });
+        document.getElementById('prev-slide').addEventListener('click', () => {
+            prevSlide();
+            resetInterval();
+        });
+
+        updateSlider();
+        startInterval();
+
+        // --- Active Nav on Scroll ---
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const headerHeight = document.getElementById('header').offsetHeight;
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - headerHeight - 10;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('nav-link-active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('nav-link-active');
+                }
+            });
+        });
+
+    });
+    </script>
+</body>
+</html>
